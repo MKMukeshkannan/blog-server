@@ -1,2 +1,71 @@
 @import "tailwindcss";
 
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.5em;
+  color: #FF9898;
+}
+
+h3 {
+  font-size: 1.17em;
+}
+
+h4 {
+  font-size: 1em;
+}
+
+h5 {
+  font-size: 0.83em;
+}
+
+h6 {
+  font-size: 0.67em;
+}
+
+
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 0px;
+  padding: 0.5em 10px;
+}
+blockquote:before {
+  color: #ccc;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+blockquote p {
+  display: inline;
+}
+
+table {
+  width: 50%;
+  text-align: left;
+  margin: auto;
+}
+table td, table th {
+  border: 1px solid #AAAAAA;
+  padding: 10px 10px;
+}
+table tbody td {
+  font-size: 13px;
+}
+table thead {
+  background: #DDDDDD;
+}
+table thead th {
+  font-weight: normal;
+}
+
+img {
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+}
+
+/* .katex { font-size: 1.5em; } */
