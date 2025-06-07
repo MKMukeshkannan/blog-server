@@ -1,11 +1,16 @@
 import NavBar from "@/components/NavBar";
 import Link from "next/link";
 
-import { Post } from "@/utils"
+import { Post } from "@/utils";
 
 export default async function Page() {
   const posts: Post[] = await fetch(
     `https://github.com/MKMukeshkannan/blog-static/blob/main/all.json?raw=true`,
+    {
+      next: {
+        revalidate: 60,
+      },
+    },
   ).then((res) => res.json());
 
   return (
@@ -32,12 +37,16 @@ const CardComponent = ({ post }: { post: Post }) => {
       </Link>
       <p>{post.description}</p>
       <h6 className="text-sm text-gray-700">
-        category: 
+        category:
         {post.category.map((cat, i) => (
-          <a href="#" className="pl-2" key={i}>{cat}</a>
+          <a href="#" className="pl-2" key={i}>
+            {cat}
+          </a>
         ))}
       </h6>
-      <h6 className="text-sm text-gray-700">posted on: {post.date.date}|{post.date.month}|{post.date.year}</h6>
+      <h6 className="text-sm text-gray-700">
+        posted on: {post.date.date}|{post.date.month}|{post.date.year}
+      </h6>
     </section>
   );
 };

@@ -4,7 +4,7 @@ import { Post } from "@/utils";
 import { Metadata } from "next";
 import Head from "next/head";
 
-// export const revalidate = 60;
+export const revalidate = 60;
 export const dynamicParams = true;
 
 type Props = {
