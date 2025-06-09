@@ -10,8 +10,8 @@ import remarkRehype from "remark-rehype";
 import rehypeMathjax from "rehype-mathjax";
 
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { far } from "react-syntax-highlighter/dist/esm/styles/hljs";
 import rehypeKatex from "rehype-katex";
+import { oneLight } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 type MarkdownRendererProps = {
   children: string;
@@ -47,7 +47,7 @@ export function MarkdownRenderer({
           return !inline && match ? (
             <SyntaxHighlighter
               showLineNumbers
-              style={far}
+              style={oneLight}
               PreTag="div"
               language={match[1]}
               {...props}
