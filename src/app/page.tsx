@@ -22,7 +22,7 @@ export default async function Page() {
           <CardComponent key={i} post={post} />
         ))}
       </section>
-      <section className="w-full p-5 py-1 max-w-4xl bg-[#FF9898] text-white ">
+      <section className="w-full p-5 py-1 max-w-4xl bg-accent-blue text-white ">
         <p>blog by MK Mukesh Kannan</p>
       </section>
     </main>
@@ -32,7 +32,7 @@ export default async function Page() {
 const CardComponent = ({ post }: { post: Post }) => {
   return (
     <section className="py-5">
-      <Link className="text-xl text-[#FF9898]" href={`blog/${post.slug}`}>
+      <Link className="text-xl text-accent-blue" href={`blog/${post.slug}`}>
         {post.title}
       </Link>
       <p>{post.description}</p>

@@ -63,7 +63,7 @@ export default async function Page({
         <NavBar slug={slug} />
         <MarkdownRenderer>{post}</MarkdownRenderer>
       </section>
-      <section className="w-full p-5 py-1 max-w-4xl bg-[#FF9898] text-white ">
+      <section className="w-full p-5 py-1 max-w-4xl bg-accent-blue text-white ">
         <p>blog by MK Mukesh Kannan</p>
       </section>
     </main>

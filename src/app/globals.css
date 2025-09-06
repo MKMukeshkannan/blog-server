@@ -6,7 +6,7 @@ h1 {
 
 h2 {
   font-size: 1.5em;
-  color: #FF9898;
+  color: #2025FF;
 }
 
 h3 {
@@ -67,6 +67,11 @@ img {
   max-width: 500px;
   margin: auto;
 }
+
+@theme {
+    --color-accent-blue: oklch(0.4768 0.2961 266.96);
+}
+
 
 /* .katex { font-size: 1.5em; } */
 
